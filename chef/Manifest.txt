@@ -4,7 +4,6 @@ Manifest.txt
 README.txt
 Rakefile
 bin/chef-client
-bin/chef-indexer
 bin/chef-server
 bin/chef-solo
 config/chef-server.rb
