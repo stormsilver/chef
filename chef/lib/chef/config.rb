@@ -235,6 +235,9 @@ class Chef
     # Those lists of regular expressions define what chef considers a
     # valid user and group name
     user_valid_regex [ /^([-a-zA-Z0-9_.]+)$/, /^\d+$/ ]
-    group_valid_regex [ /^([-a-zA-Z0-9_.]+)$/, /^\d+$/ ]
+    group_valid_regex [ /^([-a-zA-Z0-9_.]+)$/, /^\d+$/ ]     
+    
+    # Chef will always ignore these regexes when loading cookbooks
+    cookbook_loader_ignore_regexes [ /.*\.svn\/.*/ , /.*\.git/ ]
   end
 end

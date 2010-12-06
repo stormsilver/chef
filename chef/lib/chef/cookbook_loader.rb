@@ -58,6 +58,7 @@ class Chef
             }
           end
           ignore_regexes = load_ignore_file(File.join(cookbook, "ignore"))
+          @ignore_regexes[cookbook_name].concat(Chef::Config.cookbook_loader_ignore_regexes)
           @ignore_regexes[cookbook_name].concat(ignore_regexes)
           
           load_files_unless_basename(
